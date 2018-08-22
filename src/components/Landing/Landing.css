@@ -1,0 +1,7 @@
+.landingButton{
+    color: red;
+}
+
+.landingButton:hover{
+    color: blue;
+}
