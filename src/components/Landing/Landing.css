@@ -1,0 +1,14 @@
+.landing-div{
+    height: 300px;
+    border: 3px solid red;
+}
+
+
+
+.landingButton{
+    color: red;
+}
+
+.landingButton:hover{
+    color: blue;
+}
