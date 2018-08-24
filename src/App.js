@@ -13,11 +13,11 @@ class App extends Component {
       <Router >    
         <Switch >
 
-          <Route exact path="/" Component={ Landing } />
+          <Route exact path="/" component={ Landing } />
 
-          <Route exact path="/themes" Component={ Themes } />
+          <Route exact path="/themes" component={ Themes } />
 
-          <Route exact path="/single-theme" Component={ SingleTheme } />
+          <Route exact path="/single-theme" component={ SingleTheme } />
 
         </Switch>
       </Router>
