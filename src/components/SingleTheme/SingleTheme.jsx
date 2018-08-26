@@ -2,7 +2,7 @@ import React from 'react';
 
 const SingleThemeDisplay = () => {
     return(
-        <div>
+        <div className="App">
             <h1>Individual Theme discussion</h1>
         </div>
     )
