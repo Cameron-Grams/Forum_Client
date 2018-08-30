@@ -10,10 +10,18 @@ const initialState = {
 
 const UserReducer = ( state = initialState, action ) => {
     switch ( action.type ) {
-        case actionTypes.logon:
-            
+        case actionTypes.logon:{
+            return {
+                ...state,
+                userName: action.data.userName,
+                userId: action.data.userId,
+                userLastLogon: new Date()
+            }
             break;
-    
+
+        }
+            
+                
         default:
             break;
     }

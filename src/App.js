@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 import {  Switch, Route } from 'react-router-dom'; 
 import { BrowserRouter as Router } from 'react-router-dom'; 
+import store from './store'; 
+
 import Landing from './components/Landing/Landing'; 
 import Login from './components/Login/Login';
 import Register from './components/Register/Register'; 
@@ -11,7 +14,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div>  
+      <Provider store={ store } >
       <Router >    
         <Switch >
 
@@ -25,7 +28,7 @@ class App extends Component {
 
         </Switch>
       </Router>
-      </div>
+      </Provider>
     );
   }
 }
