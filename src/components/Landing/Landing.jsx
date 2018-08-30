@@ -1,13 +1,22 @@
 import React from 'react';
 import './Landing.css';
-import { Button, Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom'; 
+import { Button } from 'semantic-ui-react';
 
 
 const Landing = () => {
     return (<div class="landing-div">
         <h1>Landing page</h1>
             <Button >
-                <Icon name="plus square outline" />
+                <Link to="/login"  >
+                Login
+                </Link>
+            </Button>
+
+            <Button >
+                <Link to="/register"  >
+                Register
+                </Link>
             </Button>
     </div>);
 }
