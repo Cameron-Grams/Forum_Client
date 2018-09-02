@@ -1,24 +1,27 @@
 import React from 'react';
-import InputEntry from '../Input/Input';
+import LoginForm from './LoginForm'; 
 import './Login.css'; 
-import { Button } from 'semantic-ui-react';
 
 
 
 
 
 const Login = ( props ) => {
+
+    const sendLogin = ( values ) => {
+
+    }
+
+
     return( 
     <div className="outerShellDiv">   
     <div className="insetDiv" >
       <div>  
         <h2>Enter Name and Password to join Forum</h2>
       </div>
-      <div>  
-        < InputEntry  inputField="Enter Name" />
-        < InputEntry  inputField="Enter Password" />
-      </div>
-      <div><Button>Submit</Button></div>
+
+      < LoginForm onSubmit={ sendLogin } />
+      
     </div> 
     </div>
     )

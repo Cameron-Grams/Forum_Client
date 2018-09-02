@@ -1,5 +1,5 @@
 import React from 'react';
-import InputEntry from '../Input/Input';
+import InputEntry from '../../components/Input/Input';
 
 
 const Register = ( props ) => {

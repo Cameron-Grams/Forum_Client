@@ -17,13 +17,14 @@ const UserReducer = ( state = initialState, action ) => {
                 userId: action.data.userId,
                 userLastLogon: new Date()
             }
-            break;
 
         }
             
                 
         default:
-            break;
+            return{
+                ...state
+            }
     }
 
 

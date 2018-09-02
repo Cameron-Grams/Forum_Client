@@ -4,11 +4,11 @@ import {  Switch, Route } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom'; 
 import store from './store'; 
 
-import Landing from './components/Landing/Landing'; 
-import Login from './components/Login/Login';
-import Register from './components/Register/Register'; 
-import Themes from './components/Themes/Themes'; 
-import SingleTheme from './components/SingleTheme/SingleTheme'; 
+import Landing from './containers/Landing/Landing'; 
+import Login from './containers/Login/Login';
+import Register from './containers/Register/Register'; 
+import Themes from './containers/Themes/Themes'; 
+import SingleTheme from './containers/SingleTheme/SingleTheme'; 
 import './App.css';
 
 class App extends Component {
