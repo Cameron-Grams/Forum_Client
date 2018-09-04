@@ -6,8 +6,8 @@ import InputEntry from '../../components/Input/Input';
 let LoginForm = ( props ) => {
     return(
         <form onSubmit={ props.handleSubmit } >
-            < Field className = "" name="loginUserName" component={ InputEntry}   />
-            < Field className = "" name="loginUserPassword" component={ InputEntry}    /> 
+            < Field className = "inputField" name="loginUserName" component={ InputEntry}   />
+            < Field className = "inputField" name="loginUserPassword" component={ InputEntry}    /> 
             <Button className="submitButton" type="submit" >Log In</Button>
         </form>
     )
