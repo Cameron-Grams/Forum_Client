@@ -1,14 +1,32 @@
 import React from 'react';
-import InputEntry from '../../components/Input/Input';
+import RegisterForm from './RegisterForm'; 
+import './Register.css'; 
+
+
+
 
 
 const Register = ( props ) => {
-    return( <div>
-        <label  >
-            < InputEntry  inputField="Enter Name" />
-        </label>
-    </div> )
+
+    const sendRegistration = ( values ) => {
+        console.log( "Register Form with values: ", values ); 
+    }
+
+
+    return( 
+    <div className="outerShellDiv">   
+      <div className="insetDiv" >
+        <div>  
+          <h2>Enter Name, Password and User Information to join Forum</h2>
+        </div>
+
+        < RegisterForm onSubmit={ sendRegistration } />
+        
+      </div> 
+    </div>
+    )
 }
+
 
 export default Register;
 

@@ -5,7 +5,7 @@ import { Button } from 'semantic-ui-react';
 
 
 const Landing = () => {
-    return (<div class="landing-div">
+    return (<div className="landing-div">
         <h1>Landing page</h1>
             <Button >
                 <Link to="/login"  >

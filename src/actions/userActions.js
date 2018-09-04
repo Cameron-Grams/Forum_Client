@@ -1,9 +1,9 @@
 import * as actionTypes from './actionTypes';
-import ENDPOINT from '../config/config'; 
+import { ENDPOINT } from '../config/config'; 
 
 
 
-export function SendLogin( values ){
+export function sendLogin( values ){
     const promise = fetch( 
         `${ ENDPOINT }/api/users/logon`,
         {
@@ -15,6 +15,14 @@ export function SendLogin( values ){
             body: JSON.stringify( values )
         }
     )
+    .then( ( response, dispatch ) => {
+        dispatch( {
+            type: actionTypes.login,
+            response
+        } )
+    })
+
+    return promise; 
 
 };
 
