@@ -11,13 +11,20 @@ const initialState = {
 const UserReducer = ( state = initialState, action ) => {
     switch ( action.type ) {
         case actionTypes.login:{
+            console.log( 'user reducer with returned action: ', action.data ); 
             return {
                 ...state,
                 userName: action.data.userName,
                 userId: action.data.userId,
                 userLastLogin: new Date()
             }
+        }
 
+        case actionTypes.loginFail:{
+            console.log( 'user reducer error ', action.error );
+            return{
+                ...state
+            }
         }
             
                 

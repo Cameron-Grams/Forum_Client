@@ -4,8 +4,9 @@ import { ENDPOINT } from '../config/config';
 
 
 export function sendLogin( values ){
-    const promise = fetch( 
-        `${ ENDPOINT }/api/users/logon`,
+    return dispatch => {
+        return fetch( 
+        `${ ENDPOINT }/api/users/login`,
         {
             method: 'POST',
             headers: {
@@ -15,17 +16,29 @@ export function sendLogin( values ){
             body: JSON.stringify( values )
         }
     )
-    .then( ( response, dispatch ) => {
-        dispatch( {
-            type: actionTypes.login,
-            response
-        } )
+    .then( res => res.json() )
+    .then( response => {
+        console.log( 'user actions with response: ', response ); 
+        dispatch( loginSuccess( response ) )
+    } )
+    .catch( err => {
+        dispatch( loginFailure( err.message ) ) 
     })
-
-    return promise; 
-
+    }
 };
 
+const loginSuccess = ( user => ( {
+    type: actionTypes.login,
+    data: {
+        ...user
+        }
+    })
+)
 
-
-
+const loginFailure = ( error => ({
+    type: actionTypes.loginFail,
+    data: {
+        error
+    }
+    })
+)

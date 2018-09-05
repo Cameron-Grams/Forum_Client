@@ -6,8 +6,8 @@ import { Button } from 'semantic-ui-react';
 let LoginForm = ( props ) => {
     return(
         <form onSubmit={ props.handleSubmit } >
-            < Field className = "inputField" name="loginUserName" component={ input }   />
-            < Field className = "inputField" name="loginUserPassword" component={ input }    /> 
+            < Field className = "inputField" name="loginUserName" component={ "input" }   />
+            < Field className = "inputField" name="loginUserPassword" component={ "input" }    /> 
             <Button className="submitButton" type="submit" >Log In</Button>
         </form>
     )
