@@ -21,9 +21,7 @@ class App extends Component {
           <Route exact path="/" component={ Landing } />
           <Route exact path="/login" component={ Login } />
           <Route exact path="/register" component={ Register } />
-
           <Route exact path="/themes" component={ Themes } />
-
           <Route exact path="/single-theme" component={ SingleTheme } />
 
         </Switch>
