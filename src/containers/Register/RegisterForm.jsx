@@ -7,8 +7,8 @@ let RegisterForm = ( props ) => {
     return(
     <div>
         <form onSubmit={ props.onSubmit } >
-            < Field className = "" component={ InputEntry}   />
-            < Field className = "" component={ InputEntry}    /> 
+            < Field className = "registerInput" component={ InputEntry}   />
+            < Field className = "registerInput" component={ InputEntry}    /> 
         </form>
         <Button className="submitButton" type="submit" >Register</Button>
     </div>

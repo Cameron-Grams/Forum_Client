@@ -1,4 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux'; 
+import { sendRegistration } from '../../actions/userActions'; 
+
 import RegisterForm from './RegisterForm'; 
 import './Register.css'; 
 
@@ -10,6 +13,7 @@ const Register = ( props ) => {
 
     const sendRegistration = ( values ) => {
         console.log( "Register Form with values: ", values ); 
+        props.sendRegistration( values ); 
     }
 
 
@@ -28,5 +32,5 @@ const Register = ( props ) => {
 }
 
 
-export default Register;
+export default connect( {}, { sendRegistration } )( Register );
 

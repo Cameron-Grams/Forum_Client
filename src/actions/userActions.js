@@ -5,6 +5,9 @@ import { ENDPOINT } from '../config/config';
 
 export function sendLogin( values ){
     return dispatch => {
+
+        dispatch( loginRequest() );
+
         return fetch( 
         `${ ENDPOINT }/api/users/login`,
         {
@@ -26,6 +29,10 @@ export function sendLogin( values ){
     })
     }
 };
+
+const loginRequest = () => ( {
+    type: actionTypes.loginRequest
+})
 
 const loginSuccess = ( user => ( {
     type: actionTypes.login,
