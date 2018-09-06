@@ -4,3 +4,7 @@
     border: 1px solid black;
     margin: auto;
 }
+
+.insetDiv * {
+    padding: 10px;
+}
