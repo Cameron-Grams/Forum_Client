@@ -1,7 +1,23 @@
 import * as actionTypes from './actionTypes';
 import { ENDPOINT } from '../config/config'; 
 
+export function sendRegistration( values ){
+    return dispatch => {
+        dispatch( registrationRequest() );
 
+        return fetch(
+            `${ ENDPOINT }/api/users/register`,
+            {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify( values )
+            }
+        )
+    }
+}
 
 export function sendLogin( values ){
     return dispatch => {
