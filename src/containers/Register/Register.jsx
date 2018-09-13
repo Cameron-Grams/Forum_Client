@@ -31,6 +31,9 @@ const Register = ( props ) => {
     )
 }
 
+const mapStateToProps = ( state ) => ( {
+  user: state.user
+})
 
-export default connect( {}, { sendRegistration } )( Register );
+export default connect( mapStateToProps, { sendRegistration } )( Register );
 

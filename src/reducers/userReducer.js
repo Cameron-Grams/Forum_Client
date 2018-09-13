@@ -9,7 +9,23 @@ const initialState = {
 }
 
 const UserReducer = ( state = initialState, action ) => {
+
     switch ( action.type ) {
+
+        case actionTypes.register:{
+            console.log( "user reducer returned registration with: ", action.data.message ); 
+            return{
+                ...state
+            }
+        }
+
+        case actionTypes.registerFail:{
+            console.log( "user reducer registration failure with: ", action.data );
+            return{
+                ...state
+            }
+        }
+
         case actionTypes.login:{
             console.log( 'user reducer with returned action: ', action.data ); 
             return {
